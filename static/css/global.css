@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@300;500&display=swap');
+
+  h1{
+    font-family: 'Roboto', sans-serif;
+    
+  }
+  span{
+    font-weight: 700;
+  }
+  p{
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 200;
+  }
+  h5{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+
+
+:root {
+    /* fonts */
+    --font-roboto: Roboto;
+    --font-poppins: Poppins;
+    --font-jost: Jost;
+  
+    /* font sizes */
+    --font-size-xs: 1rem;
+    --font-size-sm: 1.13rem;
+    --font-size-base: 1.19rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.56rem;
+    --font-size-2xl: 1.63rem;
+    --font-size-3xl: 1.88rem;
+    --font-size-4xl: 2.5rem;
+    --font-size-5xl: 3.13rem;
+    --font-size-6xl: 4.31rem;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-darkslateblue-100: #4d2c5e;
+    --color-gray-100: #8a8a8a;
+    --color-gray-200: #1d1d1d;
+    --color-gray-300: #050c26;
+    --color-gray-400: #00052e;
+    --color-black: #000;
+    --color-darkgray: #acacac;
+    --color-chocolate: #ff7426;
+    --color-dimgray: #606060;
+    --color-floralwhite: #fdf8ee;
+  
+    /* border radiuses */
+    --br-xs: 14px;
+    --br-sm: 23px;
+    --br-md: 62px;
+    --br-lg: 96px;
+  }
+  
