@@ -12,6 +12,10 @@ def home():
 def undergraduate():
     return render_template('undergraduate.html')
 
+@app.route('/engineering')
+def engineering():
+    return render_template('engineering.html')
+
 
 @app.route('/login')
 def login():
