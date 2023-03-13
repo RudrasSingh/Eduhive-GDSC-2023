@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="ug.css">
-    <link rel="stylesheet" href="./global.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/ug.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/global.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
@@ -15,7 +15,7 @@
 
   <header>
     <nav>
-        <div class="navbar navbar-expand-lg fixed-top bg-white"  >
+        <div class="navbar navbar-expand-lg fixed-top bg-whiste"  >
             <div class="container-fluid">
         
               <div class="logo">   <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="svg/logo.png" alt=""></a></div>
@@ -72,7 +72,7 @@
                 <div class="card-body">
                   <h5 class="card-title">ENGINEERING</h5>
                   <p class="card-text">Engineering materials</p>
-             <a href="engineering.html"  > <button type="button" class="btn btn-warning btn-bottom-center  custom-btn">Go To</button></a>
+             <a href="{{url_for('engineering')}}"  > <button type="button" class="btn btn-warning btn-bottom-center  custom-btn">Go To</button></a>
               
               </div>
             </div>
