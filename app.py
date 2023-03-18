@@ -21,6 +21,10 @@ def engineering():
 def login():
     return render_template('login.html')
 
+@app.route('/math')
+def math():
+    return render_template('math.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
     

@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: url("/static/images/bg.png");
 	display: flex;
 	justify-content: center;
 	align-items: center;

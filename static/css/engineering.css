@@ -2,11 +2,10 @@
 
 body{
 
-  background-image: url("/static/images/bg.png");
-  background-size: cover;
- 
-}
-
+    background-image: url("/static/images/bg.png");
+    background-size: cover;
+   
+  }
 
 
 .btn-bottom-center {
