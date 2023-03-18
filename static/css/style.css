@@ -9,6 +9,7 @@ body{
  
 
 }
+
  header{
   
   background: white;
@@ -16,6 +17,7 @@ body{
   position: fixed;
   top: 0;
   z-index: 1000;
+  
  }
 
 nav {
@@ -25,7 +27,11 @@ nav {
   height:3rem;
   
 }
-
+.navbar{
+  height: 5rem;
+  margin-top: 1rem;
+  background: white;
+}
 
 .brand1 img{
   height: 7rem;
@@ -53,6 +59,8 @@ nav {
 #sign-in {
   background: #FF9138;
   border-radius: 20px;
+  margin-top: 0% !important;
+  
 }
 
 .navbar-toggler {
@@ -80,6 +88,34 @@ nav {
     #nav-length {
         width: 100%;
     }
+    .navbar{
+      position: fixed !important;
+       margin-top: 0 !important;
+      height: 8.5rem;
+      top: 0 !important;
+      padding: 0 !important;
+      background: white !important;
+      padding: 0;
+
+    } 
+    .nav-item{
+      margin-top: 1rem;
+    }
+    .navbar .navbar-nav{
+      margin-top: 0;
+    }
+    .navbar-collapse{
+      background: white;
+      margin-top: 0;
+   
+    }
+    .nav-item{
+      margin-top: 0;
+    }
+
+    .log{
+    display: none;
+    }
 
     .border-hover {
         border-top: 0;
@@ -88,9 +124,14 @@ nav {
     .border-hover:hover {
         border-top: 0;
     }
+    .navbar .navbar-nav li a{
+     margin-left: 2rem !important;
+    }
 
     #sign-in {
         border-radius: 50px;
+        margin-bottom: 1rem !important;
+        margin-left: 3rem !important;
     }
 }
 
@@ -100,7 +141,13 @@ nav {
   width: 8rem !important;
 }
 
-
+.log img{
+  height: 8rem;
+  width: 8rem;
+  margin-left: 5rem;
+  margin-top: 1rem;
+ 
+}
 
 
 
@@ -116,6 +163,7 @@ nav {
   border-radius: 30px !important;
   width: 8rem !important;
   height: 2.5rem !important;
+
 }
 
 
@@ -635,9 +683,12 @@ color: #878787;
 
 
 @media (min-width: 480px) {
+
   .hero{
+
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 0;
   }
   
   .first-hero img{
@@ -662,6 +713,7 @@ color: #878787;
 
 @media only screen and (max-width: 480px) {
   .courses {
+    margin-top: 0;
     height: auto;
     padding-bottom: 3rem;
   }

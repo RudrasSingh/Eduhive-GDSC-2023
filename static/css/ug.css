@@ -47,7 +47,10 @@ body{
   @media only screen and (max-width: 480px) {
 
     .container h1{
-       margin-left: 5rem;
+      margin-top: 10rem;
+      font-size: 2.5rem;
+       margin-left: 1.5rem;
+       margin-bottom: 2rem;
     }
     .btn-bottom-center {
         bottom: -20px;
@@ -68,18 +71,35 @@ body{
 
 
 
+    header{
+  
+      background: white;
+      width: 185rem !important;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      
+     }
+    
     nav {
+      
+      background: rgba(0, 0, 0, 0.5);
       margin-left: 50%;
-      height:5rem;
-       top:0;
+      height:3rem;
+      
+    }
+    .navbar{
+      height: 5rem;
+      margin-top: 1rem;
+      background: white;
     }
     
-    
-    
-    header{
-      
-      top: 0;
-     
+    .brand1 img{
+      height: 7rem;
+      width: 7rem;
+      margin-left: 7rem;
+      margin-top: 0;
+      padding: 0;
     }
     
     .brand {
@@ -100,6 +120,8 @@ body{
     #sign-in {
       background: #FF9138;
       border-radius: 20px;
+      margin-top: 0% !important;
+      
     }
     
     .navbar-toggler {
@@ -122,46 +144,57 @@ body{
       width: 90%;
     }
     
-    @media screen and (max-width : 480px) {
-      #nav-length {
-          width: 100%;
-      }
-      nav {
-        margin-left: 20%;
-        height:5rem;
-        
-        margin-right: 10%;
     
-      
-        
-        
-      }
+      @media screen and (max-width : 480px) {
+        #nav-length {
+            width: 100%;
+        }
+        .navbar{
+          position: fixed !important;
+           margin-top: 0 !important;
+          height: 8.5rem;
+          top: 0 !important;
+          padding: 0 !important;
+          background: white !important;
+          padding: 0;
     
-      .border-hover {
-          border-top: 0;
-      }
+        } 
+        .nav-item{
+          margin-top: 1rem;
+        }
+        .navbar .navbar-nav{
+          margin-top: 0;
+        }
+        .navbar-collapse{
+          background: white;
+          margin-top: 0;
+       
+        }
+        .nav-item{
+          margin-top: 0;
+        }
     
-      .border-hover:hover {
-          border-top: 0;
-      }
+        .log{
+        display: none;
+        }
     
-      #sign-in {
-          border-radius: 50px;
-      }
+        .border-hover {
+            border-top: 0;
+        }
+    
+        .border-hover:hover {
+            border-top: 0;
+        }
+        .navbar .navbar-nav li a{
+         margin-left: 2rem !important;
+        }
+    
+        #sign-in {
+            border-radius: 50px;
+            margin-bottom: 1rem !important;
+            margin-left: 3rem !important;
+        }
     }
-    @media (max-width: 480px) {
-      body.navbar-open {
-        position: fixed;
-        overflow-y: scroll;
-        top: 50px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 9999;
-        transition: all 0.5s;
-      }
-    }
-    
     
     
     .logo img{
@@ -169,9 +202,12 @@ body{
       width: 8rem !important;
     }
     
-    
-    
-    
-    
+    .log img{
+      height: 8rem;
+      width: 8rem;
+      margin-left: 5rem;
+      margin-top: 1rem;
+     
+    }
     
     
