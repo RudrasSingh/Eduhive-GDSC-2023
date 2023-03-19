@@ -211,5 +211,21 @@ body{
       margin-top: 1rem;
      
     }
+    @media screen and (max-width : 768px) {
+      .log{
+        display: none;
+        }
+        
+      }
+      @media screen and (max-width : 991px) {
+        .log{
+          display: none;
+          }
+        }
+        @media screen and (max-width : 680px) {
+          .log{
+            display: none;
+            }
+          }
     
     
