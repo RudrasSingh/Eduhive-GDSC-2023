@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: url("/static/images/bg.png");
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -59,8 +59,8 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	border: 1px solid orange;
+	background-color: orange;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -138,6 +138,7 @@ input {
 	z-index: 1;
 }
 
+
 .container.right-panel-active .sign-up-container {
 	transform: translateX(100%);
 	opacity: 1;
@@ -173,9 +174,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: orange;
+	background: -webkit-linear-gradient(to right, #FF4B2B, orange);
+	background: linear-gradient(to right, #FF4B2B, orange);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -268,24 +269,35 @@ footer a {
 
 
 header{
-	height: 4rem !important;
+  
 	background: white;
 	width: 185rem !important;
 	position: fixed;
 	top: 0;
 	z-index: 1000;
+	
    }
   
   nav {
 	
-	background: rgb(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.5);
 	margin-left: 50%;
 	height:3rem;
 	
   }
+  .navbar{
+	height: 5rem;
+	margin-top: 1rem;
+	background: white;
+  }
   
-  
-  
+  .brand1 img{
+	height: 7rem;
+	width: 7rem;
+	margin-left: 7rem;
+	margin-top: 0;
+	padding: 0;
+  }
   
   .brand {
 	color: #FF9138;
@@ -305,6 +317,8 @@ header{
   #sign-in {
 	background: #FF9138;
 	border-radius: 20px;
+	margin-top: 0% !important;
+	
   }
   
   .navbar-toggler {
@@ -332,6 +346,34 @@ header{
 	  #nav-length {
 		  width: 100%;
 	  }
+	  .navbar{
+		position: fixed !important;
+		 margin-top: 0 !important;
+		height: 8.5rem;
+		top: 0 !important;
+		padding: 0 !important;
+		background: white !important;
+		padding: 0;
+  
+	  } 
+	  .nav-item{
+		margin-top: 1rem;
+	  }
+	  .navbar .navbar-nav{
+		margin-top: 0;
+	  }
+	  .navbar-collapse{
+		background: white;
+		margin-top: 0;
+	 
+	  }
+	  .nav-item{
+		margin-top: 0;
+	  }
+  
+	  .log{
+	  display: none;
+	  }
   
 	  .border-hover {
 		  border-top: 0;
@@ -340,9 +382,14 @@ header{
 	  .border-hover:hover {
 		  border-top: 0;
 	  }
+	  .navbar .navbar-nav li a{
+	   margin-left: 2rem !important;
+	  }
   
 	  #sign-in {
 		  border-radius: 50px;
+		  margin-bottom: 1rem !important;
+		  margin-left: 3rem !important;
 	  }
   }
   
@@ -352,4 +399,31 @@ header{
 	width: 8rem !important;
   }
   
+  .log img{
+	height: 8rem;
+	width: 8rem;
+	margin-left: 5rem;
+	margin-top: 1rem;
+   
+  }
   
+
+  @media screen and (max-width : 768px) {
+	.log{
+	  display: none;
+	  }
+	  
+	}
+	@media screen and (max-width : 991px) {
+	  .log{
+		display: none;
+		}
+	  }
+	  @media screen and (max-width : 680px) {
+		.log{
+		  display: none;
+		  }
+		}
+  
+
+		

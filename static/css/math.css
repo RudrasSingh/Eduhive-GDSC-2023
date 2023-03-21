@@ -2,11 +2,10 @@
 
 body{
 
-  background-image: url("/static/images/bg.png");
-  background-size: cover;
- 
-}
-
+    background-image: url("/static/images/bg.png");
+    background-size: cover;
+   
+  }
 
 
 .btn-bottom-center {
@@ -211,6 +210,7 @@ body{
       margin-top: 1rem;
      
     }
+    
     @media screen and (max-width : 768px) {
       .log{
         display: none;
@@ -227,5 +227,3 @@ body{
             display: none;
             }
           }
-    
-    
