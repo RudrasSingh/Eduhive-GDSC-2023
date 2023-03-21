@@ -187,8 +187,26 @@ nav {
 
 
 
+.initial-circle {
+  width: 35px;
+  height: 35px;
+  background-color: #ffa500;
+  border-radius: 50%;
+  color: rgb(0, 5, 60);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+  top: -5px;
+  box-shadow: 0 0 10px 1px #442d03
+}
 
-
+.nav-link .d-flex .ml-2 {
+  position: relative;
+  top: -5px;
+}
 
 
 
