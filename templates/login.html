@@ -52,35 +52,45 @@
 
 
     <div class="container" id="container">
+        <!--____CODE FOR TAKING FORM SUBMISSION AND REGISTERING USER____-->
         <div class="form-container sign-up-container">
-            <form action="#">
+            <form method = "POST" action="{{url_for('signup')}}">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google"></i></a>
                 </div>
+
                 <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Name" name = "newname" required/>
+                <input type="email" placeholder="Email" name = "newemail" required/>
+                <input type="password" placeholder="Password" minlength="6" name = "newpassword" required/>
                 <button>Sign Up</button>
+                {% if signup_display_error %}
+                <script>
+                    alert("Sorry! {{ signup_error }}");
+                </script>
+                {% endif %}
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="#">
+            <!--__________CODE FOR TAKING FORM SUBMISSION AND VALIDATING_______-->
+            <form method = "POST" action="{{url_for('login')}}">
                 <h1>Sign in</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
+                <input type="email" name="email" placeholder="Email" required/>
+                <input type="password" name="password" placeholder="Password" required/>
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit">Sign In</button>
+                {% if login_display_error %}
+                <script>
+                    alert("Sorry! {{ login_error }}");
+                </script>
+                {% endif %}
             </form>
+            
         </div>
         <div class="overlay-container">
             <div class="overlay">
