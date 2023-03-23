@@ -186,7 +186,7 @@ def engineering():
 
 @app.route('/math')
 def math():
-    return render_template('math.html')
+    return render_template('EngMathMat.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
