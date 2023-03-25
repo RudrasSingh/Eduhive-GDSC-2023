@@ -25,6 +25,35 @@ auth = firebase.auth()
 app.secret_key = "SECRET_KEY"
 #-----------------------page routes-----------------------------------------
 
+#function for navbar
+def navbar_formatter(ifhtml,elsehtml):
+    if 'user' in session:
+
+        #signed user    
+        
+        user_id_token = session['user']["idToken"]
+        
+        auth.refresh(session['user']['refreshToken'])
+
+        user = auth.get_account_info(user_id_token)['users'][0]
+        
+        first_name = ""
+        
+        if "displayName" not in user:
+            first_name = "!"
+        else:
+            first_name = user['displayName'].split()[0]
+
+        return render_template(f'{ifhtml}.html', first_name=first_name)
+
+
+    else:
+
+        return render_template(f'{elsehtml}.html')
+
+
+
+
 
 @app.route('/')
 def home():
@@ -316,7 +345,7 @@ def engineering():
 
     else:
 
-        return redirect('engineering.html')
+        return render_template('engineering.html')
 
 
  
@@ -346,7 +375,7 @@ def math():
 
     else:
 
-        return redirect('math.html')
+        return render_template('math.html')
 
 @app.route('/math/first_year')
 def engmathmat():
@@ -367,12 +396,12 @@ def engmathmat():
         else:
             first_name = user['displayName'].split()[0]
 
-        return render_template('engmat.html', first_name=first_name)
+        return render_template('engmathmat.html', first_name=first_name)
 
 
     else:
 
-        return redirect('engmat.html')
+        return render_template('engmathmat.html')
 
 @app.route('/engineering-Chemistry')
 def engchemmat():
@@ -393,12 +422,38 @@ def engchemmat():
         else:
             first_name = user['displayName'].split()[0]
 
-        return render_template('engmat.html', first_name=first_name)
+        return render_template('engchemmat.html', first_name=first_name)
 
 
     else:
 
-        return redirect('engmat.html')
+        return redirect('engchemmat.html')
+
+@app.route('/pageonwork')
+def working():
+    if 'user' in session:
+
+        #signed user    
+        
+        user_id_token = session['user']["idToken"]
+        
+        auth.refresh(session['user']['refreshToken'])
+
+        user = auth.get_account_info(user_id_token)['users'][0]
+        
+        first_name = ""
+        
+        if "displayName" not in user:
+            first_name = "!"
+        else:
+            first_name = user['displayName'].split()[0]
+
+        return render_template('working.html', first_name=first_name)
+
+
+    else:
+
+        return redirect('working.html')    
 
 if __name__ == '__main__':
     app.run(debug=True)
