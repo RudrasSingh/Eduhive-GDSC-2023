@@ -348,6 +348,58 @@ def math():
 
         return redirect('math.html')
 
+@app.route('/math/first_year')
+def engmathmat():
+    if 'user' in session:
+
+        #signed user    
+        
+        user_id_token = session['user']["idToken"]
+        
+        auth.refresh(session['user']['refreshToken'])
+
+        user = auth.get_account_info(user_id_token)['users'][0]
+        
+        first_name = ""
+        
+        if "displayName" not in user:
+            first_name = "!"
+        else:
+            first_name = user['displayName'].split()[0]
+
+        return render_template('engmat.html', first_name=first_name)
+
+
+    else:
+
+        return redirect('engmat.html')
+
+@app.route('/engineering-Chemistry')
+def engchemmat():
+    if 'user' in session:
+
+        #signed user    
+        
+        user_id_token = session['user']["idToken"]
+        
+        auth.refresh(session['user']['refreshToken'])
+
+        user = auth.get_account_info(user_id_token)['users'][0]
+        
+        first_name = ""
+        
+        if "displayName" not in user:
+            first_name = "!"
+        else:
+            first_name = user['displayName'].split()[0]
+
+        return render_template('engmat.html', first_name=first_name)
+
+
+    else:
+
+        return redirect('engmat.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
     
