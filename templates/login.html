@@ -16,10 +16,10 @@
 <header>
     <nav>
         <div class="navbar navbar-expand-lg fixed-top bg-white my-0"  >
-          <a class="navbar-brand py-0 my-2" href="#"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
+          <a class="navbar-brand py-0 my-2" href="{{url_for('home')}}"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
             <div class="container-fluid">
              
-              <div class="logo">   <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
+              <div class="logo">   <a href="{{url_for('home')}}" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
                 <button class="navbar-toggler mr-5" type="button" data-bs-toggle="collapse" 
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"  >
@@ -28,13 +28,13 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                     <ul id="nav-length" class="navbar-nav justify-content-end border-2 text-center">
                         <li class="nav-item mr-5">
-                            <a href="#body-content" class="nav-link border-hover my-2 py-0 text-black">Home</a>
+                            <a href="{{url_for('home')}}" class="nav-link border-hover my-2 py-0 text-black">Home</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a href="#" class="nav-link border-hover py-0 my-2 text-black">About Us</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a href="#courses" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
+                            <a href="{{url_for('home')}}" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a href="#footer" class="nav-link border-hover  my-2 py-0 text-black">Contact Us</a>
@@ -57,7 +57,7 @@
             <form method = "POST" action="{{url_for('signup')}}">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="{{url_for('google_login')}}" class="social"><i class="fab fa-google"></i></a>
                 </div>
 
                 <span>or use your email for registration</span>
@@ -77,12 +77,12 @@
             <form method = "POST" action="{{url_for('login')}}">
                 <h1>Sign in</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-google"></i></a>
+                    <a href="" class="social"><i class="fab fa-google"></i></a>
                 </div>
                 <span>or use your account</span>
                 <input type="email" name="email" placeholder="Email" required/>
                 <input type="password" name="password" placeholder="Password" required/>
-                <a href="#">Forgot your password?</a>
+                <a href="{{url_for('forgot_password')}}">Forgot your password?</a>
                 <button type="submit">Sign In</button>
                 {% if login_display_error %}
                 <script>

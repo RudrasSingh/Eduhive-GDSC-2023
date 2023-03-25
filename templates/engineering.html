@@ -29,23 +29,40 @@
               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                   <ul id="nav-length" class="navbar-nav justify-content-end border-2 text-center">
                       <li class="nav-item mr-5">
-                          <a href="index.html" class="nav-link border-hover my-2 py-0 text-black">Home</a>
+                          <a href="{{url_for('home')}}" class="nav-link border-hover my-2 py-0 text-black">Home</a>
                       </li>
                       <li class="nav-item mr-5">
                           <a href="#" class="nav-link border-hover py-0 my-2 text-black">About Us</a>
                       </li>
                       <li class="nav-item mr-5">
-                          <a href="/templates/index.html" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
+                          <a href="#courses" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
                       </li>
                       <li class="nav-item mr-5">
                           <a href="#footer" class="nav-link border-hover  my-2 py-0 text-black">Contact Us</a>
                       </li>
-                     
-                      <li class="nav-item mr-5">
-                          <a href="{{url_for('login')}}" id="sign-in" class="nav-link py-2  px-5 my-0 text-black">
-                              Log in
-                          </a>
+                      {%if 'user' in session %}
+                      <!-- Display Dashboard link and user's first initial -->
+                      <li class="nav-item mr-3">
+                        <a href="{{ url_for('dashboard') }}" id="dashboard" class="nav-link py-2 px-4 my-0 text-black">
+                          <div class="d-flex align-items-center justify-content-center position-relative">
+                            <div class="initial-circle">{{ first_name[0]|upper }}</div>
+                            <span class="ml-2">Dashboard</span>
+                          </div>
+                        </a>
                       </li>
+                      <li class="nav-item mr-5">
+                        <a href="{{url_for('logout')}}" id="sign-in" class="nav-link py-1.8  px-4 my-0 text-black">
+                            Log out
+                        </a>
+                      </li>
+                      {% else %}
+                      <!-- Display Login link -->
+                      <li class="nav-item mr-5">
+                        <a href="{{url_for('login')}}" id="sign-in" class="nav-link py-2  px-5 my-0 text-black">
+                            Log in
+                        </a>
+                      </li>
+                      {% endif %}
                   </ul>
               </div>
           </div>

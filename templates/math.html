@@ -14,44 +14,61 @@
 <body>
 
    
-<header>
-  <nav>
-      <div class="navbar navbar-expand-lg fixed-top bg-white my-0"  >
-        <a class="navbar-brand py-0 my-2" href="#"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
-          <div class="container-fluid">
-           
-            <div class="logo">   <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
-              <button class="navbar-toggler mr-5" type="button" data-bs-toggle="collapse" 
-                  data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                  aria-expanded="false" aria-label="Toggle navigation"  >
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                  <ul id="nav-length" class="navbar-nav justify-content-end border-2 text-center">
-                      <li class="nav-item mr-5">
-                          <a href="index.html" class="nav-link border-hover my-2 py-0 text-black">Home</a>
-                      </li>
-                      <li class="nav-item mr-5">
-                          <a href="#" class="nav-link border-hover py-0 my-2 text-black">About Us</a>
-                      </li>
-                      <li class="nav-item mr-5">
-                          <a href="/templates/index.html" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
-                      </li>
-                      <li class="nav-item mr-5">
-                          <a href="#footer" class="nav-link border-hover  my-2 py-0 text-black">Contact Us</a>
-                      </li>
-                     
-                      <li class="nav-item mr-5">
+  <header>
+    <nav>
+        <div class="navbar navbar-expand-lg fixed-top bg-white my-0"  >
+          <a class="navbar-brand py-0 my-2" href="#"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
+            <div class="container-fluid">
+             
+              <div class="logo">   <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
+                <button class="navbar-toggler mr-5" type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"  >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul id="nav-length" class="navbar-nav justify-content-end border-2 text-center">
+                        <li class="nav-item mr-5">
+                            <a href="{{url_for('home')}}" class="nav-link border-hover my-2 py-0 text-black">Home</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a href="#" class="nav-link border-hover py-0 my-2 text-black">About Us</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a href="#courses" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a href="#footer" class="nav-link border-hover  my-2 py-0 text-black">Contact Us</a>
+                        </li>
+                        {%if 'user' in session %}
+                        <!-- Display Dashboard link and user's first initial -->
+                        <li class="nav-item mr-3">
+                          <a href="{{ url_for('dashboard') }}" id="dashboard" class="nav-link py-2 px-4 my-0 text-black">
+                            <div class="d-flex align-items-center justify-content-center position-relative">
+                              <div class="initial-circle">{{ first_name[0]|upper }}</div>
+                              <span class="ml-2">Dashboard</span>
+                            </div>
+                          </a>
+                        </li>
+                        <li class="nav-item mr-5">
+                          <a href="{{url_for('logout')}}" id="sign-in" class="nav-link py-1.8  px-4 my-0 text-black">
+                              Log out
+                          </a>
+                        </li>
+                        {% else %}
+                        <!-- Display Login link -->
+                        <li class="nav-item mr-5">
                           <a href="{{url_for('login')}}" id="sign-in" class="nav-link py-2  px-5 my-0 text-black">
                               Log in
                           </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </nav>
-</header>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+  </header>
   
   
 
