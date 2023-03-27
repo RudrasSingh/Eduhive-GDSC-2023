@@ -1,7 +1,7 @@
-{% extends "layout2.html" %}
+{% extends "layout.html" %}
 
 {% block title %} Computer {% endblock %}
-
+{% block style %}<link rel="stylesheet" type = "text/css" href="{{url_for('static', filename = 'css/material.css')}}">{% endblock %}
 {% block body %}
 
 <div class="head"><h1>First Year</h1></div>

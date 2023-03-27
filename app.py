@@ -26,7 +26,7 @@ app.secret_key = "SECRET_KEY"
 #-----------------------page routes-----------------------------------------
 
 #function for navbar
-def navbar_formatter(ifhtml,elsehtml):
+def skeleton(webpage):
     if 'user' in session:
 
         #signed user    
@@ -44,12 +44,12 @@ def navbar_formatter(ifhtml,elsehtml):
         else:
             first_name = user['displayName'].split()[0]
 
-        return render_template(f'{ifhtml}.html', first_name=first_name)
+        return render_template(f'{webpage}.html', first_name=first_name)
 
 
     else:
 
-        return render_template(f'{elsehtml}.html')
+        return render_template(f'{webpage}.html')
 
 
 
@@ -153,7 +153,9 @@ def login():
     else:
         return render_template('login.html')
 
-
+@app.route('/streak-hive')
+def streak_hive():
+    working()
 
 
 @app.route('/logout')
@@ -221,40 +223,6 @@ def forgot_password():
                 return render_template('forgot_password.html', message = "Something is not right. Please try again later or contact the administrator", display_error = True)
     else:
         return render_template('forgot_password.html')
-
-
-
-
-'''# define the route for reset password page
-@app.route('/reset_password/<oobCode>', methods=['GET', 'POST'])
-def reset_password(oobCode):
-    if request.method == 'POST':
-        password = request.form['password']
-        confirm_password = request.form['confirm_password']
-        if password != confirm_password:
-            message = ('error', 'Passwords do not match.')
-            return render_template('reset_password.html', message=message, oobCode=oobCode)
-        try:
-            auth.confirm_password_reset(oobCode, password)
-            message = ('success', 'Password reset successfully.')
-            return render_template('reset_password.html', message=message, oobCode=oobCode)
-        except Exception as e:
-            message = ('error', str(e))
-            return render_template('reset_password.html', message=message, oobCode=oobCode)
-    else:
-        return render_template('reset_password.html', oobCode=oobCode)
-
-
-
-# define the route for regenerating the password reset link
-@app.route('/regenerate_reset_link/<oobCode>', methods=['POST'])
-def regenerate_reset_link(oobCode):
-    try:
-        auth.send_password_reset_email(auth.get_oob_confirmation_code(oobCode)['email'])
-        return 'Password reset link has been regenerated. Check your email.'
-    except Exception as e:
-        return str(e)'''
-
 
 
 

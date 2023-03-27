@@ -23,10 +23,10 @@
 <header>
   <nav>
       <div class="navbar navbar-expand-lg fixed-top bg-white my-0"  >
-        <a class="navbar-brand py-0 my-2" href="#"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
+        <a class="navbar-brand py-0 my-2" href="{{url_for('home')}}"> <div class="log"><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></div></a>
           <div class="container-fluid">
            
-            <div class="logo">   <a href="#" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
+            <div class="logo">   <a href="{{url_for('home')}}" class="brand text-decoration-none d-block d-lg-none fw-bold fs-1 ml-5" ><img src="{{url_for('static', filename = 'svg/logo.png')}}" alt=""></a></div>
               <button class="navbar-toggler mr-5" type="button" data-bs-toggle="collapse" 
                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                   aria-expanded="false" aria-label="Toggle navigation"  >
@@ -35,10 +35,10 @@
               <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                   <ul id="nav-length" class="navbar-nav justify-content-end border-2 text-center">
                       <li class="nav-item mr-5">
-                          <a href="#body-content" class="nav-link border-hover my-2 py-0 text-black">Home</a>
+                          <a href="{{url_for('home')}}" class="nav-link border-hover my-2 py-0 text-black">Home</a>
                       </li>
                       <li class="nav-item mr-5">
-                          <a href="#" class="nav-link border-hover py-0 my-2 text-black">About Us</a>
+                          <a href="{{url_for('streak_hive')}}" class="nav-link border-hover py-0 my-2 text-black">Streak Hive</a>
                       </li>
                       <li class="nav-item mr-5">
                           <a href="#courses" class="nav-link border-hover my-2 py-0 text-black">Courses</a>
