@@ -70,7 +70,10 @@ body{
 
 
 
-
+ .card img{
+  height: 18rem;
+  width: 25.9rem;
+ }
 
 
     header{
