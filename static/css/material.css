@@ -11,16 +11,25 @@ body{
   .head{
     margin-top: 5rem;
   }
-  
+  .card img{
+    height: 18rem;
+    width: 27rem;
+   }
+   .card{
+    width: 27rem;
+   }
+   
   .btn-bottom-center {
       position: absolute;
       bottom: -17px;
       left: 50%;
       transform: translateX(-50%);
     }
-   h1{
-   margin-left: 45%;
-   margin-bottom: 4rem;
+    h1{
+
+   
+   margin-left: 39%;
+   margin-bottom: 6rem;
    }
    
   
@@ -30,9 +39,9 @@ body{
     padding: 1rem;
 
     }
-  
+    
  
-  
+   
     .custom-btn {
       background-color: orange !important;
       border-radius: 30px !important;
