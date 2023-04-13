@@ -37,6 +37,8 @@ body{
   }
   
 
+/*responsive*/
+
 
   @media only screen and (max-width: 480px) {
     .container .row{
@@ -60,9 +62,6 @@ body{
         margin-bottom: 2rem;
       }
     }
-
-
-
 
 
 
