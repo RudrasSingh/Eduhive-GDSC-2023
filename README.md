@@ -38,10 +38,13 @@ How to Run:
 To run the project in your local machine you need to follow the following process: 
 In the terminal, write the following codes;
 ------- install flask in your machine
+        
         pip install flask
 ------- install pyrebase4 to use firebase in your machine
+        
         pip install pyrebase4
 
 now run the code and open your browser and in the search bar write;
--------- localhost:5000
+-------- 
+localhost:5000
 now the program is running!
